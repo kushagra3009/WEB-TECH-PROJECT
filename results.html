@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results | Quiz App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- HOME BUTTON -->
+    <a href="index.html" class="home-btn">🏠</a>
+
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="page active">
+      <div class="container">
+        <div class="results-card">
+          <h1>🎉 Quiz Complete!</h1>
+
+          <div class="score-circle">
+            <span id="scorePercentage"></span>
+          </div>
+
+          <div class="results-details">
+            <p>Chapter: <span id="resultChapter"></span></p>
+            <p>Correct: <span id="correctAnswers"></span></p>
+            <p>Wrong: <span id="wrongAnswers"></span></p>
+            <p>Not Attempted: <span id="notAttempted"></span></p>
+          </div>
+
+          <!-- NEW: Performance summary row -->
+          <h2 class="review-title">Performance Summary</h2>
+          <div class="results-summary">
+            <div class="summary-item">
+              <span class="summary-label">Total Questions</span>
+              <span id="sumTotal" class="summary-value">0</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Attempted</span>
+              <span id="sumAttempted" class="summary-value">0</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Accuracy</span>
+              <span id="sumAccuracy" class="summary-value">0%</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Time Taken</span>
+              <span id="sumTime" class="summary-value">0s</span>
+            </div>
+          </div>
+
+          <h2 class="review-title">Question-wise Review</h2>
+
+          <div class="review-filters">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="correct">Correct</button>
+            <button class="filter-btn" data-filter="wrong">Wrong</button>
+            <button class="filter-btn" data-filter="unattempted">
+              Unattempted
+            </button>
+            <button class="filter-btn" data-filter="marked">Marked</button>
+          </div>
+          
+          
+
+          <div id="reviewContainer" class="review-container"></div>
+
+          <div class="results-actions">
+            <a href="index.html" class="btn btn-primary">Home</a>
+            <a id="retakeBtn" class="btn btn-secondary">Retake</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order important: explanations first, then main script -->
+    <script src="explanation.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

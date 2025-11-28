@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz | Quiz App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- HOME BUTTON -->
+    <a href="index.html" class="home-btn">🏠</a>
+
+    <!-- THEME TOGGLE -->
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- QUESTION PALETTE -->
+    <div id="questionPalette" class="qp-card">
+      <h3>Questions</h3>
+      <div id="paletteGrid" class="qp-grid"></div>
+    </div>
+
+    <!-- TIMER DISPLAY -->
+    <div
+      id="timerBox"
+      style="
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #c084fc;
+      "
+    >
+      Time Left: <span id="timerValue">60s</span>
+    </div>
+
+    <!-- QUIZ SECTION WHERE JS INSERTS HTML -->
+    <div class="container">
+      <div id="quizSection"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="explanation.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

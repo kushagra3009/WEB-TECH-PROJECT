@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Quiz App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- 🌙 THEME TOGGLE -->
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="page active">
+      <div class="container">
+        <div class="header-bar">
+          <h1>🧠 Multi-Category Quiz App</h1>
+          <div class="user-info">
+            <span class="welcome-text"
+              >Welcome, <strong id="userName"></strong>!</span
+            >
+            <a href="login.html" class="btn btn-logout">Logout</a>
+          </div>
+        </div>
+
+        <p class="subtitle">Select your exam and chapter</p>
+
+        <div class="category-grid">
+          <div class="category-card">
+            <h2>JEE</h2>
+            <p>Physics, Chemistry, Maths</p>
+            <a href="chapters.html?category=jee" class="btn btn-primary"
+              >View Chapters</a
+            >
+          </div>
+
+          <div class="category-card">
+            <h2>CUET</h2>
+            <p>General Knowledge & Reasoning</p>
+            <a href="chapters.html?category=cuet" class="btn btn-primary"
+              >View Chapters</a
+            >
+          </div>
+
+          <div class="category-card">
+            <h2>NEET</h2>
+            <p>Biology, Physics & Chemistry</p>
+            <a href="chapters.html?category=neet" class="btn btn-primary"
+              >View Chapters</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
